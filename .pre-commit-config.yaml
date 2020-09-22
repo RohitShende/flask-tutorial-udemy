@@ -43,24 +43,9 @@ repos:
   #  #      - id: black
   #  #        language_version: python3.6
   #
-  #  - repo: https://github.com/Lucas-C/pre-commit-hooks-bandit
-  #    rev: v1.0.4
-  #    hooks:
-  #      - id: python-bandit-vulnerability-check
-  #        args: [-l, --recursive, -x, tests]
-  #        files: .py$
-
-  - repo: local
+  - repo: https://github.com/Lucas-C/pre-commit-hooks-bandit
+    rev: v1.0.4
     hooks:
-      - id: activate virtual env
-        name: activate venv
-        entry: venv/Scripts/activate
-        language: python
-        types: [python]
-        stages: [commit]
-      - id: tests
-        name: run tests
-        entry: pytest -v
-        language: python
-        types: [python]
-        stages: [commit]
+      - id: python-bandit-vulnerability-check
+        args: [-l, --recursive, -x, tests]
+        files: .py$
