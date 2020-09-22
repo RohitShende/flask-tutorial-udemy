@@ -14,3 +14,4 @@ class TestApp:
         """
         response = client.get("/")
         assert response.status_code == 302
+        assert 1 == 2
