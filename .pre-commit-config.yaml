@@ -50,11 +50,11 @@ repos:
         args: [-l, --recursive, -x, tests]
         files: .py$
 
-  - repo: local
-    hooks:
-      - id: tests
-        name: run tests
-        entry: pytest -v
-        language: system
-        types: [python]
-        stages: [push]
+#  - repo: local
+#    hooks:
+#      - id: tests
+#        name: run tests
+#        entry: venv/Scripts/pytest --collect-only
+#        language: python
+#        types: [python]
+#        stages: [commit]

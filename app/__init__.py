@@ -1,13 +1,10 @@
 """
 Initializing the flask app
 """
-import werkzeug
 from flask import Flask
 
-from .apis_v1 import blueprint as v1_blueprint
-from .views import main as main_blueprint
-
-werkzeug.cached_property = werkzeug.utils.cached_property
+from app.apis_v1 import blueprint as v1_blueprint
+from app.views import main as main_blueprint
 
 
 def create_app():
