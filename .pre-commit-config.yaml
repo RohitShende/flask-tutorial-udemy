@@ -52,9 +52,15 @@ repos:
 
   - repo: local
     hooks:
+      - id: activate virtual env
+        name: activate venv
+        entry: venv/Scripts/activate
+        language: python
+        types: [python]
+        stages: [commit]
       - id: tests
         name: run tests
-        entry: tests\\run_tests.bat
+        entry: pytest -v
         language: python
         types: [python]
         stages: [commit]
