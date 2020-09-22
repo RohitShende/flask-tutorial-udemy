@@ -1,60 +1,60 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
-    hooks:
-      - id: trailing-whitespace
-      - id: end-of-file-fixer
-        files: .py$
-      - id: check-yaml
-      - id: check-added-large-files
-      - id: check-merge-conflict
-      - id: debug-statements
-      - id: requirements-txt-fixer
-      - id: pretty-format-json
-
-  - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.8.3
-    hooks:
-      - id: flake8
-        additional_dependencies: [flake8-typing-imports==1.7.0]
-        args: [--max-line-length=100]
-
-  - repo: https://github.com/pre-commit/mirrors-autopep8
-    rev: v1.5.4
-    hooks:
-      - id: autopep8
-
-  - repo: https://github.com/pre-commit/pre-commit
-    rev: v2.7.1
-    hooks:
-      - id: validate_manifest
-
-  - repo: https://github.com/asottile/reorder_python_imports
-    rev: v2.3.5
-    hooks:
-      - id: reorder-python-imports
-        args: [--py3-plus]
-
-  #  - repo: https://github.com/ambv/black
-  #    rev: 20.8b1
+#  - repo: https://github.com/pre-commit/pre-commit-hooks
+  #    rev: v3.2.0
   #    hooks:
-  #      - id: black
-  #        language_version: python3.6
+  #      - id: trailing-whitespace
+  #      - id: end-of-file-fixer
+  #        files: .py$
+  #      - id: check-yaml
+  #      - id: check-added-large-files
+  #      - id: check-merge-conflict
+  #      - id: debug-statements
+  #      - id: requirements-txt-fixer
+  #      - id: pretty-format-json
+  #
+  #  - repo: https://gitlab.com/pycqa/flake8
+  #    rev: 3.8.3
+  #    hooks:
+  #      - id: flake8
+  #        additional_dependencies: [flake8-typing-imports==1.7.0]
+  #        args: [--max-line-length=100]
+  #
+  #  - repo: https://github.com/pre-commit/mirrors-autopep8
+  #    rev: v1.5.4
+  #    hooks:
+  #      - id: autopep8
+  #
+  #  - repo: https://github.com/pre-commit/pre-commit
+  #    rev: v2.7.1
+  #    hooks:
+  #      - id: validate_manifest
+  #
+  #  - repo: https://github.com/asottile/reorder_python_imports
+  #    rev: v2.3.5
+  #    hooks:
+  #      - id: reorder-python-imports
+  #        args: [--py3-plus]
+  #
+  #  #  - repo: https://github.com/ambv/black
+  #  #    rev: 20.8b1
+  #  #    hooks:
+  #  #      - id: black
+  #  #        language_version: python3.6
+  #
+  #  - repo: https://github.com/Lucas-C/pre-commit-hooks-bandit
+  #    rev: v1.0.4
+  #    hooks:
+  #      - id: python-bandit-vulnerability-check
+  #        args: [-l, --recursive, -x, tests]
+  #        files: .py$
 
-  - repo: https://github.com/Lucas-C/pre-commit-hooks-bandit
-    rev: v1.0.4
+  - repo: local
     hooks:
-      - id: python-bandit-vulnerability-check
-        args: [-l, --recursive, -x, tests]
-        files: .py$
-
-#  - repo: local
-#    hooks:
-#      - id: tests
-#        name: run tests
-#        entry: venv/Scripts/pytest --collect-only
-#        language: python
-#        types: [python]
-#        stages: [commit]
+      - id: tests
+        name: run tests
+        entry: tests\\run_tests.bat
+        language: python
+        types: [python]
+        stages: [commit]
