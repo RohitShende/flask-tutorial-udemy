@@ -11,6 +11,8 @@ distlib==0.3.1
 filelock==3.0.12
 flake8==3.8.3
 Flask==1.1.2
+Flask-JWT==0.3.2
+Flask-RESTful==0.3.8
 flask-restplus==0.13.0
 identify==1.5.4
 importlib-metadata==1.7.0
@@ -31,6 +33,7 @@ pre-commit==2.7.1
 py==1.9.0
 pycodestyle==2.6.0
 pyflakes==2.2.0
+PyJWT==1.4.2
 pylint==2.6.0
 pyparsing==2.4.7
 pyrsistent==0.17.3
