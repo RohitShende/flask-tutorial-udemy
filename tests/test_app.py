@@ -1,5 +1,5 @@
 """
-Test App class to test app related functionalities
+Test App class to test flask_restplus_app related functionalities
 """
 
 

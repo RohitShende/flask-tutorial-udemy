@@ -4,7 +4,7 @@ This module contains version 1 APIs
 from flask import Blueprint
 from flask_restplus import Api
 
-from app.apis.student import api as student_api
+from flask_restplus_app.apis.student import api as student_api
 
 blueprint = Blueprint("api", __name__, url_prefix="/api/v1")
 

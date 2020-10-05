@@ -3,13 +3,13 @@ Contains API's related to Student
 """
 import traceback
 
-from flask_restplus import fields
 from flask_restplus import Namespace
 from flask_restplus import Resource
+from flask_restplus import fields
 
-from app.services.common import token_required
-from app.services.student_services import add_student
-from app.services.student_services import get_student
+from flask_restplus_app.services.common import token_required
+from flask_restplus_app.services.student_services import add_student
+from flask_restplus_app.services.student_services import get_student
 
 api = Namespace("student", description="Operations related to student")
 

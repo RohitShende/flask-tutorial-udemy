@@ -3,9 +3,9 @@ This is a conftest file needed for pytest
 """
 import pytest
 
-from app import create_app
+from flask_restplus_app import create_app
 
-print("Creating app...")
+print("Creating flask_restplus_app...")
 application = create_app()
 
 

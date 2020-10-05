@@ -1,7 +1,7 @@
 """
 Used to run the application on production
 """
-from app import create_app
+from flask_restplus_app import create_app
 
 application = create_app()
 

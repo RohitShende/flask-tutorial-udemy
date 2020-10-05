@@ -1,5 +1,5 @@
 """
-Contains API routes from main app
+Contains API routes from main flask_restplus_app
 """
 from flask import Blueprint
 from flask import redirect
